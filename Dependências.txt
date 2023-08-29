@@ -1,0 +1,18 @@
+npm i express 
+npm i axios
+npm i mysql2
+npm i dotenv
+npm i nodemon -D
+npm i sequelize
+npm i sequelize-cli -D
+npx sequelize-cli init
+npm i cors
+
+
+MODEL MENSAGEM; 
+
+npx sequelize-cli model:generate --name Messages --attributes name:string,email:string,subject:string,content:string
+
+EXECULTAR AS MIGRAÇÕES;
+
+npx sequelize-cli db:migrate
