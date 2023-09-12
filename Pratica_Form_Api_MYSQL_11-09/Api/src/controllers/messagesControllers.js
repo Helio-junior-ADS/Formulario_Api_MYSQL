@@ -1,7 +1,6 @@
 const db = require('../db/models/index');
 
-const createMessages = async (req,res) => {
-  const {body} = req;
+const createMessages = async (req,res) => { 
 
    await db.Messages.create(req.body).then((showResponse)=>{
     return res.json({
@@ -41,8 +40,8 @@ const updateMessage = async (req,res) => {
   },{
     where:{id:id}
   });
-  const show = await db.Messages.findByPk(id);
-  return res.status(200).json(show);
+  /* const show = await db.Messages.findByPk(id); */
+  return res.status(200).json({"message":"Messagem Atualizada com SUCESSO !!!"});
 }
 
 const deleteMessage = async (req,res) => {
